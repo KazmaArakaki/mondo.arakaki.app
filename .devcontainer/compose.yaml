@@ -1,0 +1,44 @@
+services:
+  app:
+    container_name: mondo-arakaki-app-app
+    image: localhost/mondo-arakaki-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces/arakaki.app/mondo:cached
+      - node_modules:/workspaces/arakaki.app/mondo/node_modules
+    environment:
+      VIRTUAL_HOST: "mondo.arakaki.app.localhost"
+      VIRTUAL_PORT: "3000"
+      DATABASE_URL: "postgresql://postgres:postgres@db:5432/mondo_arakaki_app_local"
+      AUTH_SECRET: "e4c8ed8e40b8c0ab4967794ae10fc1a38ffdde123ae8f871c62678e3dd9d7387"
+      NEXT_PUBLIC_APP_URL: "http://mondo.arakaki.app.localhost"
+    env_file:
+      - .env
+    command: sleep infinity
+    networks:
+      app-network:
+      localhost-proxy-network:
+
+  db:
+    image: postgres:17.2
+    container_name: mondo-arakaki-app-db
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "mondo_arakaki_app_local"
+    networks:
+      app-network:
+    ports:
+      - 5433:5432
+
+networks:
+  localhost-proxy-network:
+    external: true
+  app-network:
+
+volumes:
+  node_modules:
+    name: mondo-arakaki-app-node_modules
