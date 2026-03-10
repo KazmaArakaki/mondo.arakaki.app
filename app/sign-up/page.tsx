@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
 import { SignUpForm } from "./_components/sign-up-form";
 
@@ -26,7 +27,9 @@ export default async function Page() {
         </div>
       </div>
 
-      <SignUpForm />
+      <Suspense>
+        <SignUpForm />
+      </Suspense>
     </div>
   );
 }

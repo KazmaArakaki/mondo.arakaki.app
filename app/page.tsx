@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
 import { SignInForm } from "@/components/sign-in-form";
 
@@ -26,7 +27,9 @@ export default async function Page() {
         </div>
       </div>
 
-      <SignInForm />
+      <Suspense>
+        <SignInForm />
+      </Suspense>
     </div>
   );
 }
