@@ -9,7 +9,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN rm pnpm-lock.json && pnpm i
+RUN pnpm ci
 RUN pnpx prisma generate --generator client
 RUN pnpm build
 
