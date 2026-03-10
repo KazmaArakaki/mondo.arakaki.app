@@ -9,6 +9,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN npm install -g pnpm@latest-10
 RUN pnpm ci
 RUN pnpx prisma generate --generator client
 RUN pnpm build
