@@ -28,7 +28,8 @@ export default async function Page() {
       </div>
 
       <Suspense>
-        <SignInForm />
+        <SignInForm
+          redirect="/bookmarks" />
       </Suspense>
     </div>
   );

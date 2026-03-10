@@ -22,7 +22,7 @@ export default async function Layout({ children }: Readonly<{
   return (
     <html>
       <body className={cn(font.className)}>
-        <div className="flex flex-col h-dvh w-md max-w-md bg-linear-to-r from-app-lavender to-app-light-pink overflow-x-hidden">
+        <div className="flex flex-col h-dvh w-full max-w-md bg-linear-to-r from-app-lavender to-app-light-pink overflow-x-hidden">
           <div className="flex-1 w-full overflow-y-auto">
             {children}
           </div>
