@@ -86,21 +86,23 @@ export default AuthPage(async (props) => {
                   <BookmarkIsPublishedSwitch />
                 </div>
 
-                <div className="flex justify-between items-center gap-2 py-3 px-4 bg-[#fff0f8] border border-app-light-pink rounded-xl">
-                  <div className="flex flex-col min-w-0">
-                    <div className="text-sm font-bold">
-                      公開ページを確認
+                {bookmark.isPublished && (
+                  <div className="flex justify-between items-center gap-2 py-3 px-4 bg-[#fff0f8] border border-app-light-pink rounded-xl">
+                    <div className="flex flex-col min-w-0">
+                      <div className="text-sm font-bold">
+                        公開ページを確認
+                      </div>
+
+                      <div className="text-xs text-app-hot-pink truncate">
+                        {generateBookmarkBlogUrl(bookmark)}
+                      </div>
                     </div>
 
-                    <div className="text-xs text-app-hot-pink truncate">
-                      {generateBookmarkBlogUrl(bookmark)}
-                    </div>
+                    <ExternalLink
+                      size={18}
+                      className="text-app-hot-pink" />
                   </div>
-
-                  <ExternalLink
-                    size={18}
-                    className="text-app-hot-pink" />
-                </div>
+                )}
               </Card>
             </Link>
           </div>

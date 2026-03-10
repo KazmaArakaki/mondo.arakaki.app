@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import z from "zod";
 
 import { getBookmark } from "@/actions/noauth/bookmark/get-bookmark";
+import { CallToActionCard } from "@/components/card/call-to-action-card";
 import { ErrorCode } from "@/lib/server-action";
 import { cn, PageProps } from "@/lib/utils";
 
@@ -78,6 +79,10 @@ export default async function Page(props: PageProps) {
 
         <ChatMessageList
           bookmark={bookmark} />
+
+        <div className="p-4">
+          <CallToActionCard />
+        </div>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default async function Page() {
             URLを貼って、AIと喋るだけ🌟
           </div>
 
-          <div className="text-sm text-center text-app-text-gray">
+          <div className="text-sm text-center text-app-medium-gray">
             対話ログがそのままブログになる
             <br />
             新感覚プラットフォーム
