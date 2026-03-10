@@ -17,6 +17,7 @@ export function ChatMessageList() {
   useEffect(() => {
     messageListScrollAnchorRef.current?.scrollIntoView({
       behavior: "smooth",
+      block: "nearest",
     });
   }, [messages]);
 

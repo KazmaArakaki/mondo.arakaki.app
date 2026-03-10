@@ -34,12 +34,12 @@ export function Header(props: {
             onClick={() => {
               setIsSummaryShown(!isSummaryShown);
             }}
-            className="flex-1 flex flex-col cursor-poiinter">
-            <div className="max-w-[280] text-sm truncate">
+            className="flex-1 flex flex-col min-w-0 cursor-poiinter">
+            <div className="text-start text-sm truncate">
               {props.bookmark.title}
             </div>
 
-            <div className="max-w-[280] text-xs text-app-medium-gray truncate">
+            <div className="text-start text-xs text-app-medium-gray truncate">
               {props.bookmark.url}
             </div>
           </button>
