@@ -88,6 +88,7 @@ export async function createBookmark(data: {
           type: "url_context",
         },
       ],
+      response_mime_type: "application/json",
       response_format: zodToJsonSchema(summaryOutputSchema),
     });
 

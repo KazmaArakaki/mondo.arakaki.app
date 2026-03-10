@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 
 export function Header(props: {
@@ -20,10 +22,12 @@ export function Header(props: {
       </div>
 
       <div className="flex flex-col py-3 px-4 border-t">
-        <Button
-          size="lg">
-          新しいURLでチャットをはじめよう 🚀
-        </Button>
+        <Link href="/bookmarks/new">
+          <Button
+            size="lg">
+            新しいURLでチャットをはじめよう 🚀
+          </Button>
+        </Link>
       </div>
     </div>
   );

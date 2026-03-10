@@ -119,6 +119,7 @@ async function createOrUpdateBookmarkPost(prisma: PrismaClient, data: {
         type: "google_search",
       },
     ],
+    response_mime_type: "application/json",
     response_format: zodToJsonSchema(interactionOutputSchema),
   });
 

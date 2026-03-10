@@ -67,6 +67,7 @@ export async function generateAiBookmarkChatMessage(data: {
       ].join("\n"),
       previous_interaction_id: bookmark.geminiInteractionId,
       input: data.userMessage || "続けて",
+      response_mime_type: "application/json",
       response_format: zodToJsonSchema(interactionOutputSchema),
     });
 
