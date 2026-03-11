@@ -366,44 +366,6 @@ export function LandingSections() {
             answer="公開設定をオンにしない限り、あなたの対話は完全にプライベートです。自分だけのメモとしてもお使いいただけます。" />
         </div>
       </section>
-
-      {/* ── Section 7: フッターCTA ── */}
-      <section className="flex flex-col items-center gap-4 px-6 py-8">
-        <Image
-          src="/logo.png"
-          alt="mondo logo"
-          height={421}
-          width={1156}
-          className="h-10 w-auto opacity-80" />
-
-        <div className="text-sm text-center text-white/70">
-          URLを貼って、AIと喋るだけ。
-          <br />
-          あなたの「気になる」を、世界に届けよう。
-        </div>
-
-        <div className="text-xs text-center text-white/40 mt-2">
-          © 2026 mondo
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-3">
-          <Link href="/legal/tokushoho" className="text-xs text-white/40 hover:text-white/70 transition-colors">
-            特定商取引法に基づく表記
-          </Link>
-
-          <Link href="/legal/terms" className="text-xs text-white/40 hover:text-white/70 transition-colors">
-            利用規約
-          </Link>
-
-          <Link href="/legal/privacy" className="text-xs text-white/40 hover:text-white/70 transition-colors">
-            プライバシーポリシー
-          </Link>
-
-          <Link href="/legal/contact" className="text-xs text-white/40 hover:text-white/70 transition-colors">
-            お問い合わせ
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
