@@ -3,6 +3,7 @@
 import {
   BookOpen, ChevronDown, ChevronUp, Globe, Link as LinkIcon, MessageCircle, Sparkles, Zap,
 } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -383,6 +384,24 @@ export function LandingSections() {
 
         <div className="text-xs text-center text-white/40 mt-2">
           © 2026 mondo
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-3">
+          <Link href="/legal/tokushoho" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            特定商取引法に基づく表記
+          </Link>
+
+          <Link href="/legal/terms" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            利用規約
+          </Link>
+
+          <Link href="/legal/privacy" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            プライバシーポリシー
+          </Link>
+
+          <Link href="/legal/contact" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            お問い合わせ
+          </Link>
         </div>
       </section>
     </div>
